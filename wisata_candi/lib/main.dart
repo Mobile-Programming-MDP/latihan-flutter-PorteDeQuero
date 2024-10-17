@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_candi/data/candi_data.dart';
+import 'package:wisata_candi/detail_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyWidget());
 }
 
 class MyWidget extends StatelessWidget {
@@ -9,12 +11,8 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello world'),
-        ),
-      ),
+    return MaterialApp(
+      home: DetailScreen(candi: candiList[0], ),
     );
   }
 }
